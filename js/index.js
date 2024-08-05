@@ -1,4 +1,4 @@
-const container = document.getElementById("dynamic-content");
+const dc= document.getElementById("dynamic-content");
 const links = document.querySelectorAll("nav a");
 let btns = document.querySelectorAll("nav ul li");
 let url = "partials/home.html";
@@ -12,10 +12,10 @@ const loadContent = (urlFeed) => {
       return response.text();
     })
     .then(data => {
-      container.innerHTML = data;
+      dc.innerHTML = data;
     })
     .catch(err => {
-      container.innerHTML = err.message;
+      dc.innerHTML = err.message;
     });
 };
 
