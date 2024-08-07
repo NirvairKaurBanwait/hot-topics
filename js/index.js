@@ -37,7 +37,7 @@ links.forEach(link => {
   link.addEventListener("click", selectContent);
 });
 
-window.addEventListener('popstate', function(event) {
+/* window.addEventListener('popstate', function(event) {
   const state = event.state;
   if (state && state.path) {
     loadContent(state.path);
@@ -45,6 +45,7 @@ window.addEventListener('popstate', function(event) {
     loadContent("partials/home.html");
   }
 });
+*/
 
 // Load default content on page load and update the URL to show index.html
 document.addEventListener("DOMContentLoaded", () => {
