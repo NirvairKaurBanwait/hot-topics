@@ -3,7 +3,7 @@ const links = document.querySelectorAll("nav a");
 let btns = document.querySelectorAll("nav ul li");
 let url = "partials/home.html";
 
-const loadContent = (urlFeed) => {
+function loadContent(urlFeed) {
   fetch(urlFeed)
     .then(response => {
       if (!response.ok) {
@@ -19,7 +19,7 @@ const loadContent = (urlFeed) => {
     });
 };
 
-const selectContent = (event) => {
+function selectContent(event) {
   event.preventDefault();
   const urlFeed = event.target.getAttribute("href");
   loadContent(urlFeed);
@@ -34,6 +34,6 @@ const selectContent = (event) => {
 
 loadContent(url);
 
-links.forEach(link => {
+for (let link of links){
   link.addEventListener("click", selectContent);
-});
+}
